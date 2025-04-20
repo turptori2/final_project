@@ -1,0 +1,288 @@
+
+/* skip to main link */
+div.skip a {
+    position: absolute;
+    font-family: 'Black Ops One';
+    top: -40px;
+    margin-left: 10px;
+}
+
+/* nav */
+/* example for nav bar set up to be sticky https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=h */
+/* menu icon https://www.w3schools.com/howto/howto_css_menu_icon.asp */
+/* sidenav https://www.w3schools.com/howto/howto_js_sidenav.asp */
+/* split nav https://www.w3schools.com/howto/howto_css_topnav_split.asp */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* style nav logo */
+.logo a {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+}
+
+/* nav links home  */
+/* Pills wrapper effect for the whole nav_center */
+.nav_center {
+	display: flex;
+	gap: 1rem;
+	background-color: #111;
+	border-radius: 50px;
+	padding: 0.5rem 1rem;
+	border: 2px solid #444;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	list-style: none;
+	margin: 0;
+	font-family: 'Black Ops One', sans-serif;
+}
+
+  /* list syle for nav home / about  */
+.nav_center li {
+	margin: 0;
+	padding: 0;
+}
+
+ /* style links */
+.nav_center li a {
+	color: white;
+	text-decoration: none;
+	font-size: 1.1rem;
+	padding: 0.5rem 1.5rem;
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	display: inline-block;
+}
+
+  /* add hover effect to nav links */
+.nav_center li a:hover {
+	background-color: #222;
+	transform: scale(1.05);
+}
+
+  /* active link styling */
+.nav_center li.active a {
+	background-color: #333;
+	border: 1px solid #666;
+}
+
+/* Right-side nav buttons container */
+.nav_btn {
+	display: flex;
+	padding-left: 2%; /*padding between nav buttons*/
+	gap: 1rem;
+	list-style: none;
+	font-family: 'Black Ops One', sans-serif;
+	align-items: baseline;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* make button shadow */
+  }
+
+  /* style active page link */
+.nav_center .active a {
+	border-bottom: 2px solid #0077b5;
+	color: #0077b5;
+}
+
+  /* style the buttons */
+.nav_btn a {
+	display: flex; /* Add this */
+  	justify-content: center; /* Center icon horizontally */
+  	align-items: center;
+	padding: 0.4rem 0.8rem;
+	background-color: black;
+	border:#222;
+	font-size: 20px;
+	color: white;
+	border-radius: 10%;
+	width: 50px;
+	height: 50px;
+	transition: background-color 0.3s;
+}
+
+.nav_btn a:hover {
+	background-color: grey;
+}
+
+/* linkedin button */
+
+button {
+	color: darkblue;
+	border-radius: 50%;
+	height: 5vw;
+	width: 5vw;
+	font-size: 1.5rem;
+}
+
+
+/* Navbar site title link */
+h1.logo a {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: #333;
+	text-decoration: none;
+	margin: 0;
+  }
+
+  /* section h2 headers */
+h2 {
+	font-family: 'Black Ops One', sans-serif;
+	font-size: 2rem;
+	color: #333;
+	margin: 0 0 1rem 0;
+  }
+
+  /* h3 headers: incl.flip card back headers */
+  h3 {
+	font-size: 1.25rem;
+	font-weight: bold;
+	margin: 0 0 0.5rem 0;
+	color: white;
+  }
+
+
+body {
+	background-color: black;
+}
+
+/* index / home page */
+/* Keep your existing .skills-tab styles */
+.skills-scroll-wrapper {
+	position: relative;
+	overflow: hidden;
+	margin: 3rem auto;
+	width: 85vw;
+	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .skills-scroll {
+	display: flex;
+	gap: 1rem;
+	padding: 1rem 0;
+	white-space: nowrap;
+	animation: scroll-marquee 30s linear infinite; /*scroll effect*/
+  }
+
+  .skill-item {
+	flex: 0 0 auto;
+	background-color: #111;
+	color: white;
+	padding: 1rem 2rem;
+	border-radius: 10px;
+	font-family: 'Black Ops One', sans-serif;
+	font-size: 1.3rem;
+	border: 2px solid #444;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s ease;
+  }
+
+  .skill-item:hover {
+	transform: scale(1.1);
+	background-color: #222;
+  }
+
+  /* Hide scrollbars */
+  .skills-scroll::-webkit-scrollbar {
+	display: none;
+  }
+
+  .skills-scroll {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+  }
+
+/* add keyframe to scroll */
+/* https://www.bennadel.com/blog/4536-creating-a-marquee-effect-with-css-animations.htm */
+  @keyframes scroll-marquee {
+	0% {
+	  transform: translateX(0); /*https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX*/
+	}
+	100% {
+	  transform: translateX(-50%);
+	}
+  }
+
+/* section headers */
+.project-section, .skills-section, .pub-section {
+	padding: 2rem;
+	text-align: center;
+}
+
+.project-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2.5rem;
+	margin-top: 2rem;
+}
+
+.project-card {
+	background-color: transparent;
+	width: 35vw;
+	height: 35vw;
+	perspective: 1000px;
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.card-front {
+	background-color: #bbb;
+}
+
+.card-front img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-back {
+	background-color: #0077b5;
+	color: white;
+	transform: rotateY(180deg);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+}
+
+
+/* media query */
+
+/* nav menu expand https://www.w3schools.com/css/css_navbar.asp */

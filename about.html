@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Video Controls</title>
+	<!-- link CSS -->
+	<link rel="stylesheet" type="text/css" href="css/final.css">
+	<!-- icon library for hamburger menu -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<header>
+		<nav class="navbar">
+			<h1 class="logo"><a href = "index.html">Tori Turpin</a></h1>
+
+			<ul class="nav_center">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="about.html">About</a></li>
+			  </ul>
+
+			<ul class="nav_btn">
+				<i style="font-size:24px" class="fa">&#xf0e1;</i>
+				<li><a href = "Tori_Turpin_Resume copy.pdf">Resume</a></li>
+				<li><a href = "Tori_Turpin_Resume copy.pdf">LinkedIn</a></li>
+			</ul>
+		</nav>
+		<h1>Projects</h1>
+	</header>
+
+<!-- main -->
+<main>
+	<h1>Container for about</h1>
+
+	<!-- career timeline: https://www.w3schools.com/howto/howto_css_timeline.asp -->
+
+	<div class="timeline">
+		<div class="container left">
+		  <div class="content">
+			<h2>2017</h2>
+			<p>Lorem ipsum..</p>
+		  </div>
+		</div>
+		<div class="container right">
+		  <div class="content">
+			<h2>2016</h2>
+			<p>Lorem ipsum..</p>
+		  </div>
+		</div>
+	  </div>
+
+</main>
+
+<!-- footer -->
+<footer>
+	<img src="images/UMSI_signature_vertical_informal_allblue.png" alt="UMSI Logo" width="50">
+	<p> © <span id="year"></span> University of Michigan | School of Information </p>
+	<a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Support Resources</a>
+</footer>
+
+	<!-- Javascript to get the current year -->
+	<script>
+		document.getElementById("year").innerHTML = new Date().getFullYear();
+	</script>
+
+	<script src="js/video.js"></script>
+
+</body>
+</html>
