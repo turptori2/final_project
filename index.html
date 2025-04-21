@@ -7,30 +7,36 @@
 	<link rel="stylesheet" type="text/css" href="css/final.css">
 	<!-- icon library for hamburger menu -->
 </head>
+
 <body>
 	<!-- header -->
 	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+
 	<!-- add skip links to sections https://webaim.org/techniques/skipnav/ -->
-	<header>
-		<nav class="navbar">
-			<h1 class="logo"><a href = "index.html">Tori Turpin</a></h1>
+<header>
+	<nav class="navbar">
+		<h1 class="logo"><a href="index.html">Tori Turpin</a></h1>
 
-			<ul class="nav_center">
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-			  </ul>
-
-		<ul class="nav_btn">
-			  <button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				<i class="fa fa-linkedin"></i>
-			  </button>
-
-			  <ul class="nav_btn">
-				<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				  <i class="fa fa-linkedin"></i>
-				</button>
-			<!-- <li><a href = "Tori_Turpin_Resume copy.pdf">Resume</a></li> -->
+		<ul class="nav_center">
+		<li class="active"><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
 		</ul>
+
+		<!-- Combined button list -->
+		<ul class="nav_btn">
+		<li>
+			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
+				<i class="fa fa-linkedin"></i>
+			</button>
+		</li>
+
+		<li>
+			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
+				<i class="fa fa-file"></i>
+			</button>
+		</li>
+		</ul>
+
 	</nav>
 </header>
 
@@ -38,12 +44,18 @@
 
 <!-- main -->
 <main>
-	<section id="about-me">
-    		<h2>About Me</h2>
-    	<p>Hello! My name is Tori. I am a Project Manager for the Harvard Brain Tissue Resource Center and a current Masters Student at the University of Michigan School of Information. I consider myself to be a passionate web developer with experience in front-end processes such as HTML, CSS, and JavaScript. I thorougly enjoy creating interactive and responsive websites!</p>
-    <p>In my free time, I love learning new programming languages, exploring new, interactive web development trends, and performing human post-mortem brain dissections!</p>
-</section>
-	
+<!-- intro  -->
+	<section class="intro-section">
+	<div class="card" tabindex="0">
+		<div class="image">
+		  <div class="title">
+			<h2>Tori Turpin</h2>
+			<img src="images/tori_profile.png" width="200" alt="tori profile photo">
+		  </div>
+		</div>
+			<p>Hi, I'm Tori! I’m the Research Project Manager at the Harvard Brain Tissue Resource Center! I am also a first year Masters of Information student at the University of Michigan focusing on User-Centered Agile Development. Enjoy!</p>
+		<div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; border-radius: inherit;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0; width: 1400px; height: 1400px;"></div></div></div>
+
 <!-- projects  -->
 <!-- https://www.w3schools.com/howto/howto_css_flip_card.asp -->
 	<section class="project-section">
@@ -52,19 +64,19 @@
 		<div class="project-card">
 		<div class="card-inner">
 			<div class="card-front" tabindex="0">
-			<img src="images/ski.HEIC" alt="Project">
+			<img src="images/brain_legacy_logo.png" alt="Brain Legacy">
 			</div>
 			<div class="card-back">
-			<h3>Ski Tracker</h3>
-			<p>Built with HTML/CSS/JS</p>
-			<p>Visualized ski data with p5.js</p>
+			<h3><a class='project btn-link' href='/images/brain_legacy_recording.mov'>Brain Legacy Demo</a></h3>
+			<p>Mobile Application built with Uizard</p>
+			<p>Platform to streamline post-mortem donation medical record procurement</p>
 			</div>
 		</div>
 		</div>
 
 		<div class="project-card">
 		<div class="card-inner">
-			<div class="card-front">
+			<div class="card-front" tabindex="0">
 			<img src="images/another_project.jpg" alt="Resource Website Project">
 			</div>
 			<div class="card-back">
@@ -77,7 +89,7 @@
 
 		<div class="project-card">
 			<div class="card-inner">
-				<div class="card-front">
+				<div class="card-front" tabindex="0">
 				<img src="images/another_project.jpg" alt="Resource Website Project">
 				</div>
 				<div class="card-back">
@@ -90,7 +102,7 @@
 
 		<div class="project-card">
 			<div class="card-inner">
-				<div class="card-front">
+				<div class="card-front" tabindex="0">
 				<img src="images/another_project.jpg" alt="Resource Website Project">
 				</div>
 				<div class="card-back">
@@ -101,13 +113,9 @@
 			</div>
 		</div>
 
-	<!-- other project card -->
-	</div>
-	</section>
-
 <!-- skills -->
 <!-- skills scroll section -->
-	<section class="skills-section">
+	<section class="skills-section" tabindex="0">
 		<h2>Skills</h2>
 		<div class="skills-scroll-wrapper">
 			<div class="skills-scroll" id="autoScroll">
@@ -116,18 +124,20 @@
 			<span class="skill-item">CSS</span>
 			<span class="skill-item">Matlab</span>
 			<span class="skill-item">Linux</span>
-			<span class="skill-item">Express</span>
+			<span class="skill-item">MySQL</span>
 			<span class="skill-item">Git</span>
 			<span class="skill-item">Python</span>
 			<span class="skill-item">UX Design</span>
 			<span class="skill-item">Usability Testing</span>
+			<span class="skill-item">REDCap</span>
+			<span class="skill-item">SPSS</span>
 			</div>
 		</div>
 	</section>
 
 <!-- publications section -->
 <!-- skills scroll section -->
-<section class="pub-section">
+<section class="pub-section" tabindex="0">
 	<h2>Publications</h2>
 	<div class="pub-wrapper">
 		<ul>
@@ -142,13 +152,30 @@
 </main>
 
 <!-- footer -->
-	<footer>
-        <img src="images/UMSI_signature_vertical_informal_allblue.png" alt="UMSI Logo" width="50">
-        <p> © <span id="year"></span> University of Michigan | School of Information </p>
-        <a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Support Resources</a>
-    </footer>
+<footer>
+	<div class="footer-content" tabindex="0">
+	  <p>More projects and experiences are always on the way. Let's keep in touch!</p>
+	  <p>© <span id="year"></span> Tori Turpin. All Rights Reserved.</p>
 
-    <!-- Javascript to get the current year -->
+	  <div class="footer-links">
+		<ul>
+		  <li><a href="mailto:turptori@umich.edu">Copy Email</a></li>
+		  <li><a href="https://www.linkedin.com/in/tori-turpin" target="_blank">LinkedIn</a></li>
+		  <li><a href="Tori_Turpin_Resume.pdf" target="_blank">Resume</a></li>
+		  <li><a href="about.html">About Me</a></li>
+		  <li><a href="projects.html">Projects</a></li>
+		</ul>
+	  </div>
+	</div>
+  </footer>
+
+<!-- Javascript to get the current year -->
+  <script>
+	// JavaScript to display the current year in the footer
+	document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+
 
     <script>
         document.getElementById("year").innerHTML = new Date().getFullYear();
