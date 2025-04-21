@@ -10,24 +10,32 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+<header>
+	<nav class="navbar">
+		<h1 class="logo"><a href="index.html">Tori Turpin</a></h1>
 
-	<header>
-		<nav class="navbar">
-			<h1 class="logo"><a href = "index.html">Tori Turpin</a></h1>
+		<ul class="nav_center">
+			<li><a href="index.html">Home</a></li>
+			<li class="active"><a href="about.html">About</a></li>
+		</ul>
 
-			<ul class="nav_center">
-				<li><a href="index.html">Home</a></li>
-				<li class="active"><a href="about.html">About</a></li>
-			  </ul>
+		<!-- Combined button list -->
+		<ul class="nav_btn">
+		<li>
+			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
+				<i class="fa fa-linkedin"></i>
+			</button>
+		</li>
 
-			<ul class="nav_btn">
-				<i style="font-size:24px" class="fa">&#xf0e1;</i>
-				<li><a href = "Tori_Turpin_Resume copy.pdf">Resume</a></li>
-				<li><a href = "Tori_Turpin_Resume copy.pdf">LinkedIn</a></li>
-			</ul>
-		</nav>
-		<h1>Projects</h1>
-	</header>
+		<li>
+			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
+				<i class="fa fa-file"></i>
+			</button>
+		</li>
+		</ul>
+
+	</nav>
+</header>
 
 <!-- main -->
 <main>
@@ -54,10 +62,21 @@
 
 <!-- footer -->
 <footer>
-	<img src="images/UMSI_signature_vertical_informal_allblue.png" alt="UMSI Logo" width="50">
-	<p> © <span id="year"></span> University of Michigan | School of Information </p>
-	<a href="https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources">UMSI Support Resources</a>
-</footer>
+	<div class="footer-content">
+	  <p>More projects and experiences are always on the way. Let's keep in touch!</p>
+	  <p>© <span id="year"></span> Tori Turpin. All Rights Reserved.</p>
+
+	  <div class="footer-links">
+		<ul>
+		  <li><a href="mailto:turptori@umich.edu">Copy Email</a></li>
+		  <li><a href="https://www.linkedin.com/in/tori-turpin" target="_blank">LinkedIn</a></li>
+		  <li><a href="Tori_Turpin_Resume.pdf" target="_blank">Resume</a></li>
+		  <li><a href="about.html">About Me</a></li>
+		  <li><a href="projects.html">Projects</a></li>
+		</ul>
+	  </div>
+	</div>
+  </footer>
 
 	<!-- Javascript to get the current year -->
 	<script>
