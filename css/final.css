@@ -307,61 +307,181 @@ body {
 	padding: 1rem;
 }
 
-/* footer */
 
-/* Footer Styles */
-.footer {
-	background-color: #111;
-	color: #fff;
-	padding: 2rem 0;
-	text-align: center;
-	font-family: 'Black Ops One', sans-serif;
+/* Contact section */
+
+.contact-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
-.footer-content {
-	max-width: 1200px;
-	margin: auto;
-	padding: 1rem;
+.contact-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
 }
 
-footer p {
-	margin: 0.5rem 0;
-	font-size: 1rem;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: white;
+.contact-section p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
 }
 
-footer .footer-links ul {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
-	padding: 0;
+/* center form fields and align in col */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-footer .footer-links li {
-	display: flex;
-	margin: 0.5rem;
+.contact-section label {
+    font-size: 1rem;
+    margin-bottom: 8px;
 }
 
-footer .footer-links a {
-	text-decoration: none;
-	color: #0077b5;
-	font-size: 1.2rem;
-	transition: color 0.3s ease;
+.contact-section input, .contact-section textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-footer .footer-links a:hover {
-	color: #ff9900;
+.contact-section button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
 }
 
 /* media query */
 
 /* responsive media query for footer */
 @media (max-width: 768px) {
-	footer .footer-links li {
-	  display: block;
-	  margin: 0.5rem 0;
-	}
+    footer .footer-links li {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }
 
 /* nav menu expand https://www.w3schools.com/css/css_navbar.asp */
+
+/* footer */
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Black Ops One', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+footer .footer-links ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links li {
+    display: flex;
+    margin: 0.5rem;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: #0077b5;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ff9900;
+}
+
+/* Contact section */
+/* media query */
+
+/* responsive media query for footer */
+@media (max-width: 768px) {
+    footer .footer-links li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+/* nav menu expand https://www.w3schools.com/css/css_navbar.asp */
+
+/* footer */
+
+/* Footer Styles */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    font-family: 'Black Ops One', sans-serif;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+footer .footer-links ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links li {
+    display: flex;
+    margin: 0.5rem;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: #0077b5;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ff9900;
+}
+
