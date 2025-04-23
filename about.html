@@ -1,89 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JavaScript Video Controls</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<!-- link CSS -->
 	<link rel="stylesheet" type="text/css" href="css/final.css">
 	<!-- icon library for hamburger menu -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<header>
-	<nav class="navbar">
-		<h1 class="logo"><a href="index.html">Tori Turpin</a></h1>
 
+<header>
+	<nav id="navbar" class="navbar">
+		<h1 class="logo"><img src="images/tori_profile.png" width="50" alt="tori profile photo"></h1>
+		<div class="nav_toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
 		<ul class="nav_center">
 			<li><a href="index.html">Home</a></li>
 			<li class="active"><a href="about.html">About</a></li>
 		</ul>
-
-		<!-- Combined button list -->
-		<ul class="nav_btn">
-		<li>
-			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				<i class="fa fa-linkedin"></i>
-			</button>
-		</li>
-
-		<li>
-			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
-				<i class="fa fa-file"></i>
-			</button>
-		</li>
-		</ul>
-
 	</nav>
 </header>
 
 <!-- main -->
 <main>
-	<h1>Container for about</h1>
+<!-- publications section -->
+<section class="pub-section" tabindex="0" id="publications">
+	<h2>Publications</h2>
+	<div class="pub-wrapper">
+			<p class="pub">Kotlarz, P., Lankinen, K., Hakonen, M., Turpin, T., Polimeni, J. R., & Ahveninen, J. (2023). Multilayer Network Analysis across Cortical Depths in Resting-State 7T fMRI. bioRxiv: the preprint server for biology, 2023.12.23.573208. https://doi.org/10.1101/2023.12.23.573208</p>
+			<p class="pub">Turpin, T., Uluç, I., Kotlarz, P., Lankinen, K., Mamashli, F., & Ahveninen, J. (2023). Comparing auditory and visual aspects of multisensory working memory using bimodally matched feature patterns. bioRxiv: the preprint server for biology, 2023.08.03.551865. https://doi.org/10.1101/2023.08.03.551865</p>
+			<p class="pub">Lankinen, K., Ahlfors, S. P., Mamashli, F., Blazejewska, A. I., Raij, T., Turpin, T., Polimeni, J. R., & Ahveninen, J. (2023). Cortical depth profiles of auditory and visual 7 T functional MRI responses in human superior temporal areas. Human brain mapping, 44(2), 362–372. https://doi.org/10.1002/hbm.26046</p>
+		</div>
+	</div>
+</section>
 
 	<!-- career timeline: https://www.w3schools.com/howto/howto_css_timeline.asp -->
-
+	<!-- timeline section -->
+<section class="timeline-section" tabindex="0" id="timeline">
+	<h2>Timeline</h2>
 	<div class="timeline">
-		<div class="container left">
-		  <div class="content">
-			<h2>2017</h2>
-			<p>Lorem ipsum..</p>
-		  </div>
+		<!-- slide-up animation https://codepen.io/michalsnik/pen/WxNdvq -->
+		 <!-- https://github.com/michalsnik/aos?tab=readme-ov-file#-animations -->
+		<div class="timeline-item left" data-aos="slide-up">
+			<div class="content">
+				<h3>2024</h3>
+				<p>Started MI Master's program at University of Michigan – specializing in User-Centered Agile Development.</p>
+			</div>
 		</div>
-		<div class="container right">
-		  <div class="content">
-			<h2>2016</h2>
-			<p>Lorem ipsum..</p>
-		  </div>
+		<div class="timeline-item right" data-aos="slide-up">
+			<div class="content">
+				<h3>2022</h3>
+				<p>Harvard Brain Tissue Resource Center</p>
+				<p>Research Project Manager</p>
+			</div>
 		</div>
-	  </div>
+		<div class="timeline-item left" data-aos="slide-up">
+			<div class="content">
+				<h3>2019</h3>
+				<p>Massachusetts General Hospital </p>
+				<p>As a senior Research Coordinator - Specializing in TMS/EEG/fMRI Labs and completed major REDCap and data management training & led research publication efforts.</p>
+			</div>
+		</div>
+		<div class="timeline-item right" data-aos="slide-up">
+			<div class="content">
+				<h3>2018</h3>
+				<p>Graduated from University of Michigan</p>
+				<p> Bachelors of Science in Biopsychology, Cognition, and Neuroscience</p>
+			</div>
+		</div>
+		<div class="timeline-item left" data-aos="slide-up">
+			<div class="content">
+				<h3>2018</h3>
+				<p>Jonides Cognitive Neuroimaging Lab</p>
+				<p>Research Assistant - Investigated effects of ADHD and tDCS neuromodulation on cognitive performance via working memory tasks.</p>
+			</div>
+		</div>
+		<div class="timeline-item right" data-aos="slide-up">
+			<div class="content">
+				<h3>2018</h3>
+				<p>Berkeley Early Learning Lab</p>
+				<p>Research Intern - Specializing in cognitive development, running experiments, and data collection.</p>
+		</div>
+		</div>
+	</div>
+	</section>
 
 </main>
 
 <!-- footer -->
+
 <footer>
-	<div class="footer-content">
+	<div class="footer">
+<!-- Combined button list --></dialog>
+	<div class="footer-content" tabindex="0">
 	  <p>More projects and experiences are always on the way. Let's keep in touch!</p>
 	  <p>© <span id="year"></span> Tori Turpin. All Rights Reserved.</p>
-
-	  <div class="footer-links">
-		<ul>
-		  <li><a href="mailto:turptori@umich.edu">Copy Email</a></li>
-		  <li><a href="https://www.linkedin.com/in/tori-turpin" target="_blank">LinkedIn</a></li>
-		  <li><a href="Tori_Turpin_Resume.pdf" target="_blank">Resume</a></li>
-		  <li><a href="about.html">About Me</a></li>
-		  <li><a href="projects.html">Projects</a></li>
-		</ul>
-	  </div>
 	</div>
-  </footer>
+	<div class='footer-contact'>
+		<h3>Contact</h3>
+	<ul class="nav_btn">
+		<li>
+			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
+				<i class="fa fa-linkedin"></i>
+			</button>
+		</li>
+		<li>
+			<button onclick="window.open('https://github.com/turptori2', '_blank')">
+				<i class="fa fa-github" aria-label="github-link"></i>
+			</button>
+		</li>
+		<li>
+			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
+				<i class="fa fa-file"></i>
+			</button>
+		</li>
+	</ul>
+	</div>
+	</div>
+	</div>
+</footer>
 
-	<!-- Javascript to get the current year -->
-	<script>
-		document.getElementById("year").innerHTML = new Date().getFullYear();
-	</script>
+<!-- js script link -->
+<script src="js/final.js"></script>
+<!-- fade in animations -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-	<script src="js/video.js"></script>
+
+<!-- JavaScript to display the current year in the footer -->
+<script>
+	document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+<script>
+	function toggleMenu() {
+	  const nav = document.querySelector('.nav_center');
+	  nav.classList.toggle('nav_open');
+	}
+</script>
 
 </body>
 </html>

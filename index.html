@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Main</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/final.css">
-	<!-- icon library for hamburger menu -->
 </head>
 
 <body>
@@ -13,52 +13,74 @@
 	<div class="skip"><a href="#main">Skip to Main Content</a></div>
 
 	<!-- add skip links to sections https://webaim.org/techniques/skipnav/ -->
+
+
 <header>
-	<nav class="navbar">
-		<h1 class="logo"><a href="index.html">Tori Turpin</a></h1>
-
+	<nav id="navbar" class="navbar">
+		<div class="logo">
+			<img src="images/tori_profile.png" width="50" alt="tori profile photo"></img>
+		</div>
+		<div class="nav_toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
 		<ul class="nav_center">
-		<li class="active"><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
 		</ul>
-
-		<!-- Combined button list -->
-		<ul class="nav_btn">
-		<li>
-			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				<i class="fa fa-linkedin"></i>
-			</button>
-		</li>
-
-		<li>
-			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
-				<i class="fa fa-file"></i>
-			</button>
-		</li>
-		</ul>
-
+	</div>
 	</nav>
 </header>
 
+
 <!-- collapsable menu & media query to expand menu  -->
+
 
 <!-- main -->
 <main>
 <!-- intro  -->
-	<section class="intro-section">
+ <!--  -->
+<section class="intro-section" tabindex="0" id="intro">
+	<!-- <section class="intro-section"> -->
 	<div class="card" tabindex="0">
-		<div class="image">
-		  <div class="title">
+		<div class="intro-title">
 			<h2>Tori Turpin</h2>
-			<img src="images/tori_profile.png" width="200" alt="tori profile photo">
-		  </div>
+			<img src="images/tori_profile.png" alt="tori profile photo">
 		</div>
-			<p>Hi, I'm Tori! I’m the Research Project Manager at the Harvard Brain Tissue Resource Center! I am also a first year Masters of Information student at the University of Michigan focusing on User-Centered Agile Development. Enjoy!</p>
-		<div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; border-radius: inherit;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; pointer-events: none; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0; width: 1400px; height: 1400px;"></div></div></div>
+		<div class="intro-text">
+			<p>Hi, I'm Tori!</p>
+			<p>I’m the Research Project Manager at the Harvard Brain Tissue Resource Center! I am also a first year Masters of Information student at the University of Michigan focusing on User-Centered Agile Development. Enjoy!</p>
+		</div>
+	</div>
+</section>
+
+<!-- skills scroll section -->
+  <!-- if time allows: add flat icons to skills: https://www.flaticon.com/free-icon-font/linkedin_6422202?related_id=6422202 -->
+
+<section class="skills-section" tabindex="0" id="skills">
+	<h2>Skills</h2>
+	<div class="skills-scroll-wrapper">
+		<div class="skills-scroll" id="autoScroll">
+		<span class="skill-item">JavaScript</span>
+		<span class="skill-item">HTML</span>
+		<span class="skill-item">CSS</span>
+		<span class="skill-item">Matlab</span>
+		<span class="skill-item">Linux</span>
+		<span class="skill-item">MySQL</span>
+		<span class="skill-item">Git</span>
+		<span class="skill-item">Python</span>
+		<span class="skill-item">UX Design</span>
+		<span class="skill-item">Usability Testing</span>
+		<span class="skill-item">REDCap</span>
+		<span class="skill-item">SPSS</span>
+		</div>
+	</div>
+</section>
 
 <!-- projects  -->
 <!-- https://www.w3schools.com/howto/howto_css_flip_card.asp -->
-	<section class="project-section">
+	<section class="project-section" tabindex="0" id="projects">
 	<h2>Projects</h2>
 	<div class="project-grid">
 		<div class="project-card">
@@ -68,7 +90,7 @@
 			</div>
 			<div class="card-back">
 			<h3><a class='project btn-link' href='/images/brain_legacy_recording.mov'>Brain Legacy Demo</a></h3>
-			<p>Mobile Application built with Uizard</p>
+			<p>Mobile App built with Uizard</p>
 			<p>Platform to streamline post-mortem donation medical record procurement</p>
 			</div>
 		</div>
@@ -77,12 +99,11 @@
 		<div class="project-card">
 		<div class="card-inner">
 			<div class="card-front" tabindex="0">
-			<img src="images/another_project.jpg" alt="Resource Website Project">
+			<img src="images/success_project.png" alt="Resource Website Project">
 			</div>
 			<div class="card-back">
-			<h3>Weather App</h3>
-			<p>Node.js & Express</p>
-			<p>API-based weather data</p>
+			<h3>Student Success Website</h3>
+			<p>HTML, CSS, & Javascript</p>
 			</div>
 		</div>
 		</div>
@@ -90,12 +111,12 @@
 		<div class="project-card">
 			<div class="card-inner">
 				<div class="card-front" tabindex="0">
-				<img src="images/another_project.jpg" alt="Resource Website Project">
+				<img src="images/brain_bank_logo.png" alt="Brain Bank Project">
 				</div>
 				<div class="card-back">
-				<h3>Weather App</h3>
-				<p>Node.js & Express</p>
-				<p>API-based weather data</p>
+				<h3>Harvard Brain Bank</h3>
+				<p>Website Development</p>
+				<p>HTML, CSS, Bootstrap, YAML</p>
 				</div>
 			</div>
 		</div>
@@ -103,121 +124,70 @@
 		<div class="project-card">
 			<div class="card-inner">
 				<div class="card-front" tabindex="0">
-				<img src="images/another_project.jpg" alt="Resource Website Project">
+				<img src="images/martinos-brain-copy.png" alt="Resource Website Project">
 				</div>
 				<div class="card-back">
-				<h3>Weather App</h3>
+				<h3>Human Connectome Project</h3>
 				<p>Node.js & Express</p>
 				<p>API-based weather data</p>
 				</div>
-			</div>
-		</div>
-
-<!-- skills -->
-<!-- skills scroll section -->
-	<section class="skills-section" tabindex="0">
-		<h2>Skills</h2>
-		<div class="skill-category">
-			<div class="category-type">Coding</div>
-			<div class="skills-scroll" id="autoScroll">
-				<span class="skill-item">JavaScript</span>
-				<span class="skill-item">HTML</span>
-				<span class="skill-item">CSS</span>
-				<span class="skill-item">Matlab</span>
-				<span class="skill-item">Python</span>
-			</div>
-		</div>
-
-                <div class="skill-category">
-                        <div class="category-type">Design</div>
-                        <div class="skills-scroll" id="autoScroll">
-                                <span class="skill-item"></span>
-                                <span class="skill-item">UX Design</span>
-                                <span class="skill-item">Usability Testing</span>
-                                <span class="skill-item">Prototyping</span>
-                                <span class="skill-item">Wireframing</span>
-			</div>
-		</div>
-
-		<div class="skill-category">
-			<div class="category-type">Tools</div>
-			<div class="skills-scroll" id="autoScroll">
-				<span class="skill-item">Git</span>
-				<span class="skill-item">Linux</span>
-				<span class="skill-item">VS Code</span>
-				<span class="skill-item">GitHub/GitLab</span>
-				<span class="skill-item">Slack</span>
-				<span class="skill-item">MySQL</span>
 			</div>
 		</div>
 	</section>
 
-<!-- publications section -->
-<!-- skills scroll section -->
-<section class="pub-section" tabindex="0">
-	<h2>Publications</h2>
-	<div class="pub-wrapper">
-		<ul>
-			<span class="pub">publication</span>
-			<span class="pub">publication</span>
-			<span class="pub">publication</span>
-		</ul>
-		</div>
-	</div>
-</section>
 
-<section class="contact-section">
-	    <h2>Contact Me</h2>
-		<p>If you would like to get in touch, feel free to send me a message!</p>
-		<form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-		        <label for="name">Name:</label><br>
-              		 <input type="text" id="name" name="name" required><br><br>
-		
-		        <label for="email">Email:</label><br>
-       			 <input type="email" id="email" name="email" required><br><br>
-
-		        <label for="message">Message:</label><br>
-		        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-		<button type="submit">Send Message</button>
-    		
-		</form>
-</section>
-
-</main>
-
-<!-- footer -->
 <footer>
-	<div class="footer-content" tabindex="0">
-	  <p>More projects and experiences are always on the way. Let's keep in touch!</p>
-	  <p>© <span id="year"></span> Tori Turpin. All Rights Reserved.</p>
-
-	  <div class="footer-links">
-		<ul>
-		  <li><a href="mailto:turptori@umich.edu">Copy Email</a></li>
-		  <li><a href="https://www.linkedin.com/in/tori-turpin" target="_blank">LinkedIn</a></li>
-		  <li><a href="Tori_Turpin_Resume.pdf" target="_blank">Resume</a></li>
-		  <li><a href="about.html">About Me</a></li>
-		  <li><a href="projects.html">Projects</a></li>
-		</ul>
-	  </div>
+	<div class="footer">
+<!-- Combined button list --></dialog>
+	<div class='footer-contact'>
+		<!-- <h3>Contact</h3> -->
+	<ul class="nav_btn">
+		<li>
+			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
+				<i class="fa fa-linkedin" aria-label="linkedin-link"></i>
+			</button>
+		</li>
+		<li>
+			<button onclick="window.open('https://github.com/turptori2', '_blank')">
+				<i class="fa fa-github" aria-label="github-link"></i>
+			</button>
+		</li>
+		<li>
+			<button onclick="window.open('TTurpin_resume_2024.pdf', '_blank')">
+				<i class="fa fa-file" aria-label="resume-link"></i>
+			</button>
+		</li>
+	</ul>
+	<p>More projects and experiences are always on the way. Let's keep in touch!</p>
 	</div>
-  </footer>
+	<div class="footer-bottom" tabindex="0">
+		<p>© <span id="year"> </span> Tori Turpin. All Rights Reserved.</p>
+	</div>
+</div>
 
-<!-- Javascript to get the current year -->
-  <script>
-	// JavaScript to display the current year in the footer
+</footer>
+
+<!-- js script link -->
+<script src="js/final.js"></script>
+<!-- fade in animations -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+<!-- JavaScript to display the current year in the footer -->
+<script>
 	document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+</script>
 
+<script>
+  AOS.init();
+</script>
 
-
-    <script>
-        document.getElementById("year").innerHTML = new Date().getFullYear();
-    </script>
-
-	<script src="js/final.js"></script>
-
+<script>
+	function toggleMenu() {
+	  const nav = document.querySelector('.nav_center');
+	  nav.classList.toggle('nav_open');
+	}
+</script>
 
 </body>
 </html>
