@@ -6,34 +6,40 @@ div.skip a {
     margin-left: 10px;
 }
 
-/* nav */
+* {
+	box-sizing: border-box;
+  }
+/* ensure the page doesn't overflow viewport */
+html, body {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* NAV */
 /* example for nav bar set up to be sticky https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_parallax&stacked=h */
 /* menu icon https://www.w3schools.com/howto/howto_css_menu_icon.asp */
 /* sidenav https://www.w3schools.com/howto/howto_js_sidenav.asp */
-/* split nav https://www.w3schools.com/howto/howto_css_topnav_split.asp */
 
+header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	margin: 0;
+}
+
+/* NAVBAR STYLING */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: black;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-/* style nav logo */
-.logo a {
-	font-size: 1.6rem;
-	font-weight: bold;
-	color: #333;
-	text-decoration: none;
-}
-
-/* nav links home  */
-/* Pills wrapper effect for the whole nav_center */
-.nav_center {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.5rem;
+	background-color: #222; /* fixed: added # to color code */
+  }
+  
+  /* NAV CENTER STYLING */
+  .nav_center {
 	display: flex;
 	gap: 1rem;
 	background-color: #111;
@@ -42,18 +48,10 @@ div.skip a {
 	border: 2px solid #444;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	list-style: none;
-	margin: 0;
-	font-family: 'Black Ops One', sans-serif;
-}
+	font-family: 'Black Ops One', sans-serif; /* fixed: added missing comma */
+  }
 
-  /* list syle for nav home / about  */
-.nav_center li {
-	margin: 0;
-	padding: 0;
-}
-
- /* style links */
-.nav_center li a {
+  .nav_center li a {
 	color: white;
 	text-decoration: none;
 	font-size: 1.1rem;
@@ -61,57 +59,59 @@ div.skip a {
 	border-radius: 30px;
 	transition: all 0.3s ease;
 	display: inline-block;
-}
-
-  /* add hover effect to nav links */
-.nav_center li a:hover {
-	background-color: #222;
-	transform: scale(1.05); /* scale the nav links on hover https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale */
-}
-
-  /* active link styling */
-.nav_center li.active a {
-	background-color: #333;
-	border: 1px solid #666;
-}
-
-/* Right-side nav buttons container */
-.nav_btn {
-	display: flex;
-	padding-left: 2%; /*padding between nav buttons*/
-	gap: .5rem;
-	list-style: none;
-	font-family: 'Black Ops One', sans-serif;
-	align-items: baseline;
-}
-
-.navbar a {
-	text-decoration: none;
-	color: #333;
-	font-weight: 500;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* make button shadow */
   }
 
-  /* style active page link */
-.nav_center .active a {
-	border-bottom: 2px solid #0077b5;
-	color: #0077b5;
-}
+  .nav_center li a:hover {
+	background-color: #222;
+	transform: scale(1.05);
+  }
 
-  /* style the buttons (linkedin / resume) */
-.nav_btn button {
-	display: flex; /* Add this */
-  	justify-content: center; /* Center icon horizontally */
-  	align-items: center;
+  .nav_center li.active a {
+	background-color: #333;
+	border: 1px solid #666;
+  }
+
+  /* HAMBURGER MENU STYLING */
+  .nav_toggle {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 6px;
+	padding: 10px;
+  }
+  
+  .bar {
+	width: 25px;
+	height: 3px;
+	background-color: white;
+  }
+  
+  /* NAV BUTTON STYLING */
+  .nav_btn {
+	display: flex;
+	padding-left: 2%;
+	gap: .5rem;
+	justify-content: center;
+	list-style: none;
+	font-family: 'Black Ops One', sans-serif;
+  }
+  
+  .nav_btn button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 55px;
+	height: 55px;
 	padding: 0.4rem 0.8rem;
-	background-color: rgb(54, 50, 50);
-	border:#222;
-	font-size: 20px;
-	color: white;
-	border-radius: 10%;
-	width: 50px;
-	height: 50px;
-	transition: background-color 0.3s;
+	background-color: white;
+	border: none;
+	font-size: 25px;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+  }
+/* links sizing for the */
+.nav_btn a i {
+	font-size: large;
 }
 
 .nav_btn button:hover {
@@ -121,55 +121,87 @@ div.skip a {
 }
 
 /* Navbar site title link */
-h1.logo a {
-	font-size: 1.5rem;
-	font-weight: bold;
+  .logo img {
+	border-radius: 70px;
+	width: 5vw;
+	min-width: 40px;
 	color: #333;
-	text-decoration: none;
 	margin: 0;
   }
-
 
 /* intro card container */
 .card {
     display: flex;
-    justify-content: space-evenly;
+	flex-direction: row-reverse;
+	flex-basis: auto;
     flex-wrap: wrap;
-    align-items: center;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: space-around;
     background-color: rgb(255, 255, 255, 0.1);
-    padding: 50px 60px 50px 60px;
+    padding: 1rem;
     border-radius: 30px;
-    margin: 60px 50px 60px 50px;
-    box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
-    overflow: hidden;
+	margin: 5vw 10vw 5vw 10vw;
+	box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    overflow-x: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
+}
+
+.intro-title {
+	order: 1;
+	flex-shrink: 1;
+	padding: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+	align-content: center;
+}
+
+.intro-text {
+	order: 2;
+	flex-shrink: 0%;
+	justify-items: stretch;
+	align-self: center;
+	align-items: center;
+    flex: 0 0 50%;
+
 }
 
 /* intro card image */
 .card img {
 	border-radius: 50%;
 	border:#b2a1a1 5px solid;
-}
-
-/* intro card text */
-.card p {
-	font-family: 'Black Ops One', sans-serif;
-	font-size: 1.5rem;
-	color:#fff;
+	width: 25vw;
+	color: #333;
+	margin: 0;
 	text-align: center;
 }
 
-  /* section h2 headers */
-h2 {
+/* intro card text */
+.card p:nth-child(1) {
 	font-family: 'Black Ops One', sans-serif;
 	font-size: 2.5rem;
+	text-align: center;
+	font-weight: bold;
+	color:#fff;
+}
+
+.card p:nth-child(2) {
+	text-align: justify;
+	font-size: 1.6rem;
+	color:#fff;
+}
+
+/* section h2 headers */
+h2 {
+	font-family: 'Black Ops One', sans-serif;
+	font-size: 1.5rem;
 	color: #333;
 	margin: 0 0 1rem 0;
+	text-align: center;
   }
 
-  /* h3 headers: incl.flip card back headers */
+/* h3 headers: incl.flip card back headers */
 h3 {
 	font-size: 1.25rem;
 	font-weight: bold;
@@ -178,12 +210,38 @@ h3 {
 }
 
 
-body {
-	background-color: black;
+/* BODY */
+p {
+	font-family: 'Black Ops One', sans-serif;
 }
 
-/* index / home page */
-/* Keep your existing .skills-tab styles */
+body {
+	background-color: black;
+	margin: 0;
+}
+
+/* body sections fade in fade out */
+.section { height: 100vh; }
+
+.tag {
+	opacity: 0;
+	transform: translate(0, 10vh);
+	transition: all 1s;
+  }
+
+.tag.visible {
+	opacity: 1;
+	transform: translate(0, 0);
+  }
+
+.yellow { background-color: lightyellow; }
+.red { background-color: lightcoral; }
+.blue { background-color: lightblue; }
+.green { background-color: lightgreen; }
+
+
+
+/* index / home page skills section */
 .skills-scroll-wrapper {
 	position: relative;
 	overflow: hidden;
@@ -191,17 +249,17 @@ body {
 	width: 85vw;
 	mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 	-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  }
+}
 
-  .skills-scroll {
+.skills-scroll {
 	display: flex;
 	gap: 1rem;
-	padding: 1rem 0;
+	padding: .5rem;
 	white-space: nowrap;
 	animation: scroll-marquee 20s linear infinite; /*scroll effect with speed*/
-  }
+}
 
-  .skill-item {
+.skill-item {
 	flex: 0 0 auto;
 	background-color: #111;
 	color: white;
@@ -214,23 +272,22 @@ body {
 	border: 2px solid #444;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	transition: transform 0.3s ease;
-  }
+}
 
-  .skill-item:hover {
+.skill-item:hover {
 	transform: scale(1.1);
-	transition: transform 0.3s ease-in-out;	
 	background-color: #222;
-  }
+}
 
   /* Hide scrollbars */
-  .skills-scroll::-webkit-scrollbar {
+.skills-scroll::-webkit-scrollbar {
 	display: none;
-  }
+}
 
-  .skills-scroll {
+.skills-scroll {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-  }
+}
 
 /* add keyframe to scroll */
 /* https://www.bennadel.com/blog/4536-creating-a-marquee-effect-with-css-animations.htm */
@@ -244,11 +301,16 @@ body {
   }
 
 /* section headers */
-.project-section, .skills-section, .pub-section {
+.project-section, .skills-section {
 	padding: 2rem;
 	text-align: center;
 }
 
+.project-section {
+	background-color: white;
+}
+
+/* project section */
 .project-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -271,6 +333,7 @@ body {
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
+	background-color: rgba(255, 255, 255, 0.1)
 }
 
 .project-card:hover .card-inner {
@@ -308,181 +371,327 @@ body {
 	padding: 1rem;
 }
 
-
-/* Contact section */
-
-.contact-section {
-    background-color: #2c3e50;
-    padding: 40px 20px;
-    margin-top: 20px;
-    border-radius: 8px;
+/* timeline section */
+.timeline-section {
+    padding: 2rem 1rem 0 1rem;
+    margin: 1rem auto;
+    width: 85vw;
+    color: white;
 }
 
-.contact-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #333;
-}
-
-.contact-section p {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
-/* center form fields and align in col */
-.contact-section form {
+.timeline {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-section label {
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-.contact-section input, .contact-section textarea {
-    padding: 10px;
-    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5vw auto;
     width: 100%;
-    max-width: 400px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
-.contact-section button {
-    background-color: #007BFF;
-    color: white;
-    font-size: 1rem;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+/* vertical timeline bar */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
 }
 
-.contact-section button:hover {
-    background-color: #0056b3;
+.timeline-item {
+    padding: 1rem 2rem 0 2rem;
+    position: relative;
+    width: 45%;
+    /* margin-bottom: 1rem; */
 }
 
-/* media query */
-
-/* responsive media query for footer */
-@media (max-width: 768px) {
-    footer .footer-links li {
-        display: block;
-        margin: 0.5rem 0;
-    }
+.timeline-item .content {
+	flex-shrink: 0; /* prevent overflow! */
+    background-color: #111;
+    justify-content: center;
+	align-content: center;
+	min-height: 10vw;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid #444;
+    font-family: 'Black Ops One', sans-serif;
 }
 
-/* nav menu expand https://www.w3schools.com/css/css_navbar.asp */
+.timeline-item.left {
+    left: 0;
+	align-items: center;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item h3 {
+	text-align: left;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.timeline-item p {
+	text-align: left;
+    font-size: 1.1rem;
+    font-family: 'Black Ops One', sans-serif;
+}
+
+/* publications section */
+.pub-section {
+	margin: 1rem 2.5rem 1.5rem 2.5rem;
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.pub {
+	margin: 1rem 3rem 1rem 3rem;
+	padding: 1rem;
+	color:white;
+	font-family: 'Black Ops One', sans-serif;
+}
 
 /* footer */
 
 /* Footer Styles */
 .footer {
-    background-color: #111;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    font-family: 'Black Ops One', sans-serif;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	color: #fff;
+	/* padding: 1.5rem 0 1.5rem 0; */
+	text-align: center;
+	font-family: 'Black Ops One', sans-serif;
+	height: 15vw;
+	align-items: center;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
+.footer-contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	background-color: #222;
+	padding: 1rem 1rem 0 1rem;
+	margin: 0 1rem 1rem 1rem;
 }
 
-footer p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
+.footer-bottom {
+	width: 100%;
+	background-color: #111;
+	opacity: .7;
+	padding: .2rem;
 }
 
-footer .footer-links ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
+.footer-bottom p {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	color:#fff;
+	font-size: 1rem;
+	margin-bottom: 1em;
 }
 
-footer .footer-links li {
-    display: flex;
-    margin: 0.5rem;
+.footer div {
+	flex-wrap: wrap;
+	flex-shrink: 1;
+	text-align: center;
+	align-content: center;
+	padding-bottom: 1rem;
 }
 
-footer .footer-links a {
-    text-decoration: none;
-    color: #0077b5;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+.footer h3 {
+	font-weight: 300;
+	font-weight: bold;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
 }
 
-footer .footer-links a:hover {
-    color: #ff9900;
-}
+/* media queries  */
 
-/* Contact section */
-/* media query */
+@media screen and (max-width: 768px) {
 
+	/* MEDIA QUERIES FOR NAV BAR */
+	.nav_toggle {
+	  display: flex;
+	}
+  
+	.nav_center {
+		flex-direction: column;
+		position: absolute;
+		top: 60%;
+		right: 0;
+		width: 8rem;
+		height: 7rem;
+		max-width: 300px;
+		min-width: 50px;
+		margin-right: .5rem;
+		background-color: #111;
+		display: none;
+		z-index: 99;
+		border-left: 2px solid #444;
+		border-radius: 30px;
+		/* padding: 1rem; */
+	}
+
+
+	.nav_open {
+	  display: flex;
+	  align-items: center;
+	  justify-items: baseline;
+	}
+
+	.nav_center ul, li {
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav_center li a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.1rem;
+		border-radius: 30px;
+		transition: all 0.3s ease;
+		display: inline-block;
+	  }
+
+
+	/* intro card */
+	.card {
+		flex-direction: column;
+		padding: 5vw;
+		flex-shrink: 1;
+		text-align: center;
+		margin: 50px 40px 30px 40px;
+	}
+
+
+	.intro-text {
+		flex-shrink: 1;
+	}
+
+	.card p:nth-child(1) {
+		font-family: 'Black Ops One', sans-serif;
+		font-size: 1.6rem;
+		margin: .5rem;
+		text-align: center;
+		font-weight: bold;
+		color:#fff;
+	}
+
+	.card p:nth-child(2) {
+		text-align: justify;
+		font-size: 1.1rem;
+		color: #fff;
+	}
+
+	/* project cards */
+	.card-back {
+		background-color: grey;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: .5rem .5rem .5rem .5rem;
+		font-size: 1rem;
+	}
+
+	.card-back p {
+		margin: 0;
+	}
+
+	/* publication section */
+	.pub {
+		margin: 1rem .3rem .1rem .3rem;
+		overflow: hidden;
+		padding: 1rem;
+		color:white;
+		font-family: 'Black Ops One', sans-serif;
+	}
+
+	/* timeline */
+	.timeline-item {
+		width: 100%;
+		text-align: center;
+	}
+
+	.timeline-item.left {
+		left: 0;
+	}
+
+	.timeline-item.right {
+		left: 0;
+	}
+
+	.timeline-item h3 {
+		text-align: center;
+	}
+
+	.timeline-item p {
+		text-align: center;
+	}
+
+	.timeline-item.right .content {
+		margin-left: 0;
+	}
+
+	.timeline-item.left .content {
+		margin-right: 0;
+	}
+
+	.timeline::after {
+		display: none;
+	}
+
+	/* skills section */
+	.skills-section {
+		margin: 0 1rem 1rem 1rem;
+		padding: 0 0 1rem 0;
+	}
+
+	/* reduce distance between skill scroll wrapper items */
+	.skills-scroll-wrapper {
+		margin: 1rem;
+	}
+
+	.skill-item {
+		flex: 0 0 auto;
+		background-color: #111;
+		color: white;
+		padding: .5rem 1rem;
+		border-radius: 10px;
+		font-family: 'Black Ops One', sans-serif;
+		font-weight: bold;
+		font-size: 1rem;
+		font-style: bold;
+		border: 2px solid #444;
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+		transition: transform 0.3s ease;
+	}
+
+	.project-grid {
+		width: 100%;
+	}
+
+	/* reduce padding for project cards for larger view */
+	.project-section, .skills-section {
+		padding: .5rem;
+	}
 /* responsive media query for footer */
-@media (max-width: 768px) {
-    footer .footer-links li {
-        display: block;
-        margin: 0.5rem 0;
-    }
+	footer .footer-links li {
+	  display: block;
+	  margin: 0.5rem 0;
+	}
+
+	/* .footer-contact p, .footer-bottom p {
+		padding: .2rem;
+	} */
+
 }
-
-/* nav menu expand https://www.w3schools.com/css/css_navbar.asp */
-
-/* footer */
-
-/* Footer Styles */
-.footer {
-    background-color: #111;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    font-family: 'Black Ops One', sans-serif;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-}
-
-footer .footer-links ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding: 0;
-}
-
-footer .footer-links li {
-    display: flex;
-    margin: 0.5rem;
-}
-
-footer .footer-links a {
-    text-decoration: none;
-    color: #0077b5;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-footer .footer-links a:hover {
-    color: #ff9900;
-}
-

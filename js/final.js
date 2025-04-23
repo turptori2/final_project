@@ -1,25 +1,24 @@
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
+// timeline fade in //
+AOS.init({
+    duration: 1500,
+  })
 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+//   DELETE IF NOT WORKING //
+// section fade in //
+  $(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".tag");
 
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+      if ($(tag).position().top < pageBottom) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  });
 
-// Add event listener for contact form
-document.addEventListener("DOMContentLoaded", () => {
-	  const form = document.querySelector("#contact-form");
-	  form.addEventListener("submit", function (e) {
-		    e.preventDefault();
-	    alert("Thank you for contacting me! Your message has been sent.");
-	    form.reset();
-	});
-});
 
 
