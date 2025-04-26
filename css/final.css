@@ -2,13 +2,16 @@
 div.skip a {
     position: absolute;
     font-family: 'Black Ops One';
-    top: -40px;
+    top: 40px;
     margin-left: 10px;
 }
 
+/* messes with timeline */
 * {
 	box-sizing: border-box;
+	font-family: 'Black Ops One', sans-serif;
   }
+
 /* ensure the page doesn't overflow viewport */
 html, body {
 	max-width: 100%;
@@ -27,34 +30,41 @@ header {
 	top: 0;
 	z-index: 100;
 	margin: 0;
+	/* bottom border with opacity of .1 */
+	border-bottom: 1px solid rgba(177, 172, 172, 0.1);
 }
 
 /* NAVBAR STYLING */
 .navbar {
 	display: flex;
 	align-items: center;
+	height: 5.5rem;
 	justify-content: space-between;
-	padding: 1rem 1.5rem;
+	padding: .5rem 1.5rem .5rem 1.5rem;
 	background-color: #222; /* fixed: added # to color code */
   }
-  
+
   /* NAV CENTER STYLING */
   .nav_center {
 	display: flex;
-	gap: 1rem;
+	gap: .5rem;
+	height: 50px;
+	width: 210px;
 	background-color: #111;
 	border-radius: 50px;
 	padding: 0.5rem 1rem;
+	align-items: center;
+	justify-content: center;
 	border: 2px solid #444;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 	list-style: none;
-	font-family: 'Black Ops One', sans-serif; /* fixed: added missing comma */
   }
 
   .nav_center li a {
 	color: white;
 	text-decoration: none;
-	font-size: 1.1rem;
+	height: 35px;
+	font-size: 1rem;
 	padding: 0.5rem 1.5rem;
 	border-radius: 30px;
 	transition: all 0.3s ease;
@@ -79,29 +89,28 @@ header {
 	gap: 6px;
 	padding: 10px;
   }
-  
+
   .bar {
 	width: 25px;
 	height: 3px;
 	background-color: white;
   }
-  
+
   /* NAV BUTTON STYLING */
   .nav_btn {
 	display: flex;
-	padding-left: 2%;
-	gap: .5rem;
+	padding-left: 10%;
+	gap: .9rem;
 	justify-content: center;
-	list-style: none;
-	font-family: 'Black Ops One', sans-serif;
   }
-  
-  .nav_btn button {
+
+  /* email link is styled in html */
+  .nav_btn button, .nav_btn li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 55px;
-	height: 55px;
+	width: 45px;
+	height: 45px;
 	padding: 0.4rem 0.8rem;
 	background-color: white;
 	border: none;
@@ -109,22 +118,32 @@ header {
 	border-radius: 50%;
 	transition: background-color 0.3s ease;
   }
-/* links sizing for the */
-.nav_btn a i {
-	font-size: large;
+
+/* override email button color */
+.fa-envelope {
+	color:black;
 }
 
-.nav_btn button:hover {
+.nav_btn button:hover, .nav_btn li:hover {
 	background-color: #514b4b;
 	border-color: #666;
-	transform: scale(1.05); /* scale the nav links on hover https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale */
+	/* transform: scale(1.05); */
+	/* scale the nav links on hover https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale */
 }
 
 /* Navbar site title link */
+
+.logo {
+	color: white;
+	flex-direction: row;
+}
+
   .logo img {
 	border-radius: 70px;
 	width: 5vw;
 	min-width: 40px;
+	max-width: 50px;
+	max-height: 80px;
 	color: #333;
 	margin: 0;
   }
@@ -137,11 +156,11 @@ header {
     flex-wrap: wrap;
 	box-sizing: border-box;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
     background-color: rgb(255, 255, 255, 0.1);
     padding: 1rem;
     border-radius: 30px;
-	margin: 5vw 10vw 5vw 10vw;
+	margin: 5vw 6vw 5vw 6vw;
 	box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
     overflow-x: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -167,39 +186,67 @@ header {
 
 }
 
+.intro-text p {
+	font-size: 1.2rem;
+}
+
 /* intro card image */
 .card img {
 	border-radius: 50%;
-	border:#b2a1a1 5px solid;
+	border:#b2a1a1 2px solid;
 	width: 25vw;
+	max-height: fit-content;
 	color: #333;
-	margin: 0;
+	margin: 10px;
 	text-align: center;
+	padding: 5px;
 }
 
 /* intro card text */
 .card p:nth-child(1) {
-	font-family: 'Black Ops One', sans-serif;
-	font-size: 2.5rem;
+	font-size: 2rem;
 	text-align: center;
 	font-weight: bold;
 	color:#fff;
 }
 
 .card p:nth-child(2) {
-	text-align: justify;
-	font-size: 1.6rem;
+	text-align: center;
+	font-size: 1.5rem;
 	color:#fff;
+}
+
+/* main header */
+h1 {
+	font-size: 3.2vw;
+	color: white;
+	margin: 0 0 .2rem 0;
+	text-align: center;
 }
 
 /* section h2 headers */
 h2 {
-	font-family: 'Black Ops One', sans-serif;
-	font-size: 1.5rem;
-	color: #333;
-	margin: 0 0 1rem 0;
+	font-size: 2.5vw;
+	color: white;
+	margin: 0 0 .2rem 0;
 	text-align: center;
-  }
+}
+
+hr {
+	border: 1px solid white;
+	opacity: 50%;
+}
+
+.intro-section {
+	margin: 0 4rem 0 4rem;
+}
+
+/* intro title h3 */
+.intro-title h2 {
+	padding-top: 0;
+	font-size: 1rem;
+	text-align: center;
+}
 
 /* h3 headers: incl.flip card back headers */
 h3 {
@@ -211,35 +258,11 @@ h3 {
 
 
 /* BODY */
-p {
-	font-family: 'Black Ops One', sans-serif;
-}
 
 body {
 	background-color: black;
 	margin: 0;
 }
-
-/* body sections fade in fade out */
-.section { height: 100vh; }
-
-.tag {
-	opacity: 0;
-	transform: translate(0, 10vh);
-	transition: all 1s;
-  }
-
-.tag.visible {
-	opacity: 1;
-	transform: translate(0, 0);
-  }
-
-.yellow { background-color: lightyellow; }
-.red { background-color: lightcoral; }
-.blue { background-color: lightblue; }
-.green { background-color: lightgreen; }
-
-
 
 /* index / home page skills section */
 .skills-scroll-wrapper {
@@ -256,14 +279,14 @@ body {
 	gap: 1rem;
 	padding: .5rem;
 	white-space: nowrap;
-	animation: scroll-marquee 20s linear infinite; /*scroll effect with speed*/
+	animation: scroll-marquee 10s linear infinite; /*scroll effect with speed*/
 }
 
 .skill-item {
 	flex: 0 0 auto;
 	background-color: #111;
 	color: white;
-	padding: 1rem 2rem;
+	padding: .7rem 1rem;
 	border-radius: 10px;
 	font-family: 'Black Ops One', sans-serif;
 	font-weight: bold;
@@ -300,14 +323,28 @@ body {
 	}
   }
 
+
+/* show and hide sections for fade in */
+/* final.css */
+section {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+	pointer-events: none; 
+	/* can't interact with it */
+  }
+  
+  section.visible {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+  }
+  
+
 /* section headers */
 .project-section, .skills-section {
 	padding: 2rem;
 	text-align: center;
-}
-
-.project-section {
-	background-color: white;
 }
 
 /* project section */
@@ -315,8 +352,8 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	gap: 2.5rem;
-	margin-top: 2rem;
+	gap: 3.5rem;
+	margin: 3rem 0 3rem 0;
 }
 
 .project-card {
@@ -333,10 +370,11 @@ body {
 	text-align: center;
 	transition: transform 0.8s;
 	transform-style: preserve-3d;
-	background-color: rgba(255, 255, 255, 0.1)
+	background-color: rgba(31, 27, 27, 0.1)
 }
 
-.project-card:hover .card-inner {
+/* flip the cards */
+.project-card.flipped .card-inner {
 	transform: rotateY(180deg);
 }
 
@@ -361,7 +399,7 @@ body {
 }
 
 .card-back {
-	background-color: grey;
+	background-color: rgb(52, 48, 48);
 	color: white;
 	transform: rotateY(180deg);
 	display: flex;
@@ -373,18 +411,23 @@ body {
 
 /* timeline section */
 .timeline-section {
-    padding: 2rem 1rem 0 1rem;
+    /* padding: 2rem 1rem 0 1rem; */
     margin: 1rem auto;
-    width: 85vw;
+    width: 70vw;
     color: white;
+}
+
+h2 {
+	font-size: 2rem;
 }
 
 .timeline {
     position: relative;
     display: flex;
+	flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 5vw auto;
+    margin: 1vw auto;
     width: 100%;
 }
 
@@ -402,7 +445,7 @@ body {
 .timeline-item {
     padding: 1rem 2rem 0 2rem;
     position: relative;
-    width: 45%;
+    width: 50%;
     /* margin-bottom: 1rem; */
 }
 
@@ -412,7 +455,7 @@ body {
     justify-content: center;
 	align-content: center;
 	min-height: 10vw;
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 2px solid #444;
@@ -431,13 +474,20 @@ body {
 .timeline-item h3 {
 	text-align: left;
     color: #fff;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
+    margin: 0.5rem 0 .5rem 0;
+    font-size: 2rem;
+}
+
+.timeline-item p:first-of-type {
+	text-align: left;
+	text-decoration: bold;
+    font-size: 2rem;
+    font-family: 'Black Ops One', sans-serif;
 }
 
 .timeline-item p {
 	text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-family: 'Black Ops One', sans-serif;
 }
 
@@ -449,11 +499,12 @@ body {
 }
 
 .pub {
-	margin: 1rem 3rem 1rem 3rem;
-	padding: 1rem;
+	margin: 1rem 4.5rem 1rem 4.5rem;
+	padding: 1rem 4rem 1rem 4rem;
 	color:white;
 	font-family: 'Black Ops One', sans-serif;
 }
+
 
 /* footer */
 
@@ -464,7 +515,6 @@ body {
 	flex-direction: column;
 	width: 100%;
 	color: #fff;
-	/* padding: 1.5rem 0 1.5rem 0; */
 	text-align: center;
 	font-family: 'Black Ops One', sans-serif;
 	height: 15vw;
@@ -477,15 +527,15 @@ body {
 	justify-content: center;
 	width: 100%;
 	background-color: #222;
-	padding: 1rem 1rem 0 1rem;
-	margin: 0 1rem 1rem 1rem;
+	padding: 1rem 2rem 0 2rem;
+	margin-top: 1rem;
 }
 
 .footer-bottom {
 	width: 100%;
 	background-color: #111;
 	opacity: .7;
-	padding: .2rem;
+	justify-content: center;
 }
 
 .footer-bottom p {
@@ -494,7 +544,7 @@ body {
 	align-content: center;
 	color:#fff;
 	font-size: 1rem;
-	margin-bottom: 1em;
+	margin-bottom: .5rem;
 }
 
 .footer div {
@@ -508,19 +558,56 @@ body {
 .footer h3 {
 	font-weight: 300;
 	font-weight: bold;
-	margin-bottom: 20px;
 	letter-spacing: 1px;
 }
+
 
 /* media queries  */
 
 @media screen and (max-width: 768px) {
 
+	h2 {
+		font-size: 1.5rem;
+		color: white;
+		margin: 0 0 .2rem 0;
+		text-align: center;
+	}
+
 	/* MEDIA QUERIES FOR NAV BAR */
+	.navbar, body {
+		width: 100%;
+		box-sizing: border-box;
+		font-family: 'Black Ops One', sans-serif;
+	  }
+
+	.navbar {
+		padding: .5rem 1.5rem .5rem 1.5rem;
+		height: 5rem;
+	}
+
+	.nav_btn {
+		width: fit-content;
+		gap: 8px;
+		padding-right: 10%;
+	}
+
+	.fa-envelope, .fa-linkedin, .fa-file, .fa-github {
+		font-size: 20px;
+		text-align: center;
+	}
+	.nav_btn button, .nav_btn li {
+		padding-left: none;
+		align-items: center;
+		width: 2rem;
+		height: 2rem;
+		background-color: white;
+		color: black;
+	}
+
 	.nav_toggle {
 	  display: flex;
 	}
-  
+
 	.nav_center {
 		flex-direction: column;
 		position: absolute;
@@ -536,14 +623,14 @@ body {
 		z-index: 99;
 		border-left: 2px solid #444;
 		border-radius: 30px;
-		/* padding: 1rem; */
+		padding: 1rem;
 	}
-
 
 	.nav_open {
 	  display: flex;
 	  align-items: center;
 	  justify-items: baseline;
+	  gap: .5rem;
 	}
 
 	.nav_center ul, li {
@@ -559,21 +646,25 @@ body {
 		border-radius: 30px;
 		transition: all 0.3s ease;
 		display: inline-block;
-	  }
+	}
 
 
 	/* intro card */
 	.card {
 		flex-direction: column;
-		padding: 5vw;
+		padding: 3vw 3vw 3vw 3vw;
 		flex-shrink: 1;
 		text-align: center;
-		margin: 50px 40px 30px 40px;
+		margin: 20px 10px 20px 10px;
 	}
 
+	.intro-section {
+		margin: 0 1rem 0 1rem;
+	}
 
 	.intro-text {
 		flex-shrink: 1;
+		padding: 0 5% 0 5%;
 	}
 
 	.card p:nth-child(1) {
@@ -586,14 +677,14 @@ body {
 	}
 
 	.card p:nth-child(2) {
-		text-align: justify;
+		text-align: center;
 		font-size: 1.1rem;
 		color: #fff;
 	}
 
 	/* project cards */
 	.card-back {
-		background-color: grey;
+		background-color: rgb(52, 48, 48);
 		color: white;
 		display: flex;
 		flex-direction: column;
@@ -601,6 +692,11 @@ body {
 		align-items: center;
 		padding: .5rem .5rem .5rem .5rem;
 		font-size: 1rem;
+	}
+
+	.project-btn-link, .card-back h2, .card-back a:link, .card-back a:active, .card-back a:visited {
+		color: white;
+		background-color: white;
 	}
 
 	.card-back p {
@@ -617,6 +713,10 @@ body {
 	}
 
 	/* timeline */
+	.timeline-section {
+		margin: 0 auto;
+	}
+
 	.timeline-item {
 		width: 100%;
 		text-align: center;
@@ -634,8 +734,14 @@ body {
 		text-align: center;
 	}
 
+	.timeline-item p:first-of-type {
+		text-align: center;
+		font-size: 1rem;
+
+	}
 	.timeline-item p {
 		text-align: center;
+		font-size: 1rem;
 	}
 
 	.timeline-item.right .content {
@@ -673,7 +779,7 @@ body {
 		font-style: bold;
 		border: 2px solid #444;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-		transition: transform 0.3s ease;
+		transition: transform 1s ease;
 	}
 
 	.project-grid {
@@ -684,14 +790,6 @@ body {
 	.project-section, .skills-section {
 		padding: .5rem;
 	}
-/* responsive media query for footer */
-	footer .footer-links li {
-	  display: block;
-	  margin: 0.5rem 0;
-	}
 
-	/* .footer-contact p, .footer-bottom p {
-		padding: .2rem;
-	} */
 
 }
