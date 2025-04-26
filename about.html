@@ -2,18 +2,42 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JavaScript Video Controls</title>
+	<title>Portfolio About</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	<!-- link CSS -->
-	<link rel="stylesheet" type="text/css" href="css/final.css">
 	<!-- icon library for hamburger menu -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/final.css">
 </head>
 <body>
 
 <header>
 	<nav id="navbar" class="navbar">
 		<h1 class="logo"><img src="images/tori_profile.png" width="50" alt="tori profile photo"></h1>
+		<ul class="nav_btn">
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')" alt="Linkedin Link">
+					<i class="fa-brands fa-linkedin" alt="linkedin link" aria-label="linkedin-link"></i>
+				</button>
+			</li>
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('https://github.com/turptori2', '_blank')">
+					<i class="fa-brands fa-github" aria-label="github-link"></i>
+				</button>
+			</li>
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('TTurpin_resume_2024.pdf', '_blank')">
+					<i class="fa fa-file" aria-label="resume-link"></i>
+				</button>
+			<li>
+				<a href="mailto:turptori@umich.edu" tabindex="0" aria-label="email link">
+					<i class="fas fa-envelope"></i>
+				</a>
+			</li>
+			</li>
+		</ul>
 		<div class="nav_toggle" onclick="toggleMenu()">
 			<div class="bar"></div>
 			<div class="bar"></div>
@@ -39,7 +63,7 @@
 	</div>
 </section>
 
-	<!-- career timeline: https://www.w3schools.com/howto/howto_css_timeline.asp -->
+<!-- career timeline: https://www.w3schools.com/howto/howto_css_timeline.asp -->
 	<!-- timeline section -->
 <section class="timeline-section" tabindex="0" id="timeline">
 	<h2>Timeline</h2>
@@ -49,38 +73,39 @@
 		<div class="timeline-item left" data-aos="slide-up">
 			<div class="content">
 				<h3>2024</h3>
-				<p>Started MI Master's program at University of Michigan – specializing in User-Centered Agile Development.</p>
+				<p>Master of Information program at University of Michigan</p>
+				<p>Specializing in User-Centered Agile Development.</p>
 			</div>
 		</div>
-		<div class="timeline-item right" data-aos="slide-up">
+		<div class="timeline-item right" data-aos="slide-up" tabindex="0">
 			<div class="content">
 				<h3>2022</h3>
 				<p>Harvard Brain Tissue Resource Center</p>
 				<p>Research Project Manager</p>
 			</div>
 		</div>
-		<div class="timeline-item left" data-aos="slide-up">
+		<div class="timeline-item left" data-aos="slide-up" tabindex="0">
 			<div class="content">
 				<h3>2019</h3>
 				<p>Massachusetts General Hospital </p>
 				<p>As a senior Research Coordinator - Specializing in TMS/EEG/fMRI Labs and completed major REDCap and data management training & led research publication efforts.</p>
 			</div>
 		</div>
-		<div class="timeline-item right" data-aos="slide-up">
+		<div class="timeline-item right" data-aos="slide-up" tabindex="0">
 			<div class="content">
 				<h3>2018</h3>
 				<p>Graduated from University of Michigan</p>
 				<p> Bachelors of Science in Biopsychology, Cognition, and Neuroscience</p>
 			</div>
 		</div>
-		<div class="timeline-item left" data-aos="slide-up">
+		<div class="timeline-item left" data-aos="slide-up" tabindex="0">
 			<div class="content">
 				<h3>2018</h3>
 				<p>Jonides Cognitive Neuroimaging Lab</p>
 				<p>Research Assistant - Investigated effects of ADHD and tDCS neuromodulation on cognitive performance via working memory tasks.</p>
 			</div>
 		</div>
-		<div class="timeline-item right" data-aos="slide-up">
+		<div class="timeline-item right" data-aos="slide-up" tabindex="0">
 			<div class="content">
 				<h3>2018</h3>
 				<p>Berkeley Early Learning Lab</p>
@@ -89,40 +114,20 @@
 		</div>
 	</div>
 	</section>
-
 </main>
 
 <!-- footer -->
 
 <footer>
 	<div class="footer">
-<!-- Combined button list --></dialog>
-	<div class="footer-content" tabindex="0">
-	  <p>More projects and experiences are always on the way. Let's keep in touch!</p>
-	  <p>© <span id="year"></span> Tori Turpin. All Rights Reserved.</p>
-	</div>
 	<div class='footer-contact'>
-		<h3>Contact</h3>
-	<ul class="nav_btn">
-		<li>
-			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				<i class="fa fa-linkedin"></i>
-			</button>
-		</li>
-		<li>
-			<button onclick="window.open('https://github.com/turptori2', '_blank')">
-				<i class="fa fa-github" aria-label="github-link"></i>
-			</button>
-		</li>
-		<li>
-			<button onclick="window.open('Tori_Turpin_Resume copy.pdf', '_blank')">
-				<i class="fa fa-file"></i>
-			</button>
-		</li>
-	</ul>
+		<h3>More projects and experiences are always on the way. Let's keep in touch!</h3>
 	</div>
+	<div class="footer-bottom" tabindex="0">
+		<p>© <span id="year"> </span> Tori Turpin. All Rights Reserved.</p>
 	</div>
-	</div>
+</div>
+
 </footer>
 
 <!-- js script link -->
