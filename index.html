@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Main</title>
+	<title>Portfolio Main</title>
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/final.css">
 </head>
 
 <body>
 	<!-- header -->
-	<div class="skip"><a href="#main">Skip to Main Content</a></div>
+	<div class="skip" color: ><a href="#main" style="color: rgb(246, 246, 248);">Skip to Main Content</a></div>
 
 	<!-- add skip links to sections https://webaim.org/techniques/skipnav/ -->
 
@@ -20,6 +21,28 @@
 		<div class="logo">
 			<img src="images/tori_profile.png" width="50" alt="tori profile photo"></img>
 		</div>
+		<ul class="nav_btn">
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')" alt="Linkedin Link">
+					<i class="fa-brands fa-linkedin" alt="linkedin link" aria-label="linkedin-link"></i>
+				</button>
+			</li>
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('https://github.com/turptori2', '_blank')">
+					<i class="fa-brands fa-github" aria-label="github-link"></i>
+				</button>
+			</li>
+			<li>
+				<inpput type="button" tabindex="0" button onclick="window.open('TTurpin_resume_2024.pdf', '_blank')">
+					<i class="fa fa-file" aria-label="resume-link"></i>
+				</button>
+			<li>
+				<a href="mailto:turptori@umich.edu" tabindex="0" aria-label="email link">
+					<i class="fas fa-envelope"></i>
+				</a>
+			</li>
+			</li>
+		</ul>
 		<div class="nav_toggle" onclick="toggleMenu()">
 			<div class="bar"></div>
 			<div class="bar"></div>
@@ -38,18 +61,19 @@
 
 
 <!-- main -->
-<main>
+<main id="main">
 <!-- intro  -->
  <!--  -->
 <section class="intro-section" tabindex="0" id="intro">
 	<!-- <section class="intro-section"> -->
 	<div class="card" tabindex="0">
 		<div class="intro-title">
-			<h2>Tori Turpin</h2>
 			<img src="images/tori_profile.png" alt="tori profile photo">
+			<h1>Tori Turpin</h1>
+			<h2>Front End Developer</h2>
 		</div>
 		<div class="intro-text">
-			<p>Hi, I'm Tori!</p>
+			<h2>Hi, I'm Tori!</h2>
 			<p>I’m the Research Project Manager at the Harvard Brain Tissue Resource Center! I am also a first year Masters of Information student at the University of Michigan focusing on User-Centered Agile Development. Enjoy!</p>
 		</div>
 	</div>
@@ -62,14 +86,15 @@
 	<h2>Skills</h2>
 	<div class="skills-scroll-wrapper">
 		<div class="skills-scroll" id="autoScroll">
-		<span class="skill-item">JavaScript</span>
-		<span class="skill-item">HTML</span>
-		<span class="skill-item">CSS</span>
+		<span class="skill-item"> HTML</span>
+		<span class="skill-item"></i> CSS</span>
+		<span class="skill-item"><i class="fab fa-js-square"></i> JavaScript</span>
 		<span class="skill-item">Matlab</span>
-		<span class="skill-item">Linux</span>
-		<span class="skill-item">MySQL</span>
+		<span class="skill-item"><i class="fa-brands fa-linux"></i> Linux</span>
+		<span class="skill-item"><i class="fa-solid fa-code"></i> MySQL</span>
+		<span class="skill-item"><i class="fa-solid fa-database"></i> MS Access</span>
 		<span class="skill-item">Git</span>
-		<span class="skill-item">Python</span>
+		<span class="skill-item"><i class="fa-brands fa-python"></i> Python</span>
 		<span class="skill-item">UX Design</span>
 		<span class="skill-item">Usability Testing</span>
 		<span class="skill-item">REDCap</span>
@@ -77,6 +102,9 @@
 		</div>
 	</div>
 </section>
+
+<!-- add horizontal line -->
+<hr>
 
 <!-- projects  -->
 <!-- https://www.w3schools.com/howto/howto_css_flip_card.asp -->
@@ -89,8 +117,9 @@
 			<img src="images/brain_legacy_logo.png" alt="Brain Legacy">
 			</div>
 			<div class="card-back">
-			<h3><a class='project btn-link' href='/images/brain_legacy_recording.mov'>Brain Legacy Demo</a></h3>
-			<p>Mobile App built with Uizard</p>
+			<h3><a class="project-btn-link" tabindex="0" href="/images/brain_legacy_recording.mov" style="opacity: 1; color: rgb(246, 246, 248); background-color: rgb(52, 48, 48);">
+				Brain Legacy Demo</a>
+			<h3>Mobile App built with Uizard</h3>
 			<p>Platform to streamline post-mortem donation medical record procurement</p>
 			</div>
 		</div>
@@ -124,12 +153,11 @@
 		<div class="project-card">
 			<div class="card-inner">
 				<div class="card-front" tabindex="0">
-				<img src="images/martinos-brain-copy.png" alt="Resource Website Project">
+				<img src="images/martinos-brain-copy.png" alt="Human Connectome Project">
 				</div>
 				<div class="card-back">
 				<h3>Human Connectome Project</h3>
-				<p>Node.js & Express</p>
-				<p>API-based weather data</p>
+				<p>fMRI based connectivity project</p>
 				</div>
 			</div>
 		</div>
@@ -138,27 +166,8 @@
 
 <footer>
 	<div class="footer">
-<!-- Combined button list --></dialog>
 	<div class='footer-contact'>
-		<!-- <h3>Contact</h3> -->
-	<ul class="nav_btn">
-		<li>
-			<button onclick="window.open('https://www.linkedin.com/in/tori-turpin', '_blank')">
-				<i class="fa fa-linkedin" aria-label="linkedin-link"></i>
-			</button>
-		</li>
-		<li>
-			<button onclick="window.open('https://github.com/turptori2', '_blank')">
-				<i class="fa fa-github" aria-label="github-link"></i>
-			</button>
-		</li>
-		<li>
-			<button onclick="window.open('TTurpin_resume_2024.pdf', '_blank')">
-				<i class="fa fa-file" aria-label="resume-link"></i>
-			</button>
-		</li>
-	</ul>
-	<p>More projects and experiences are always on the way. Let's keep in touch!</p>
+		<h3>More projects and experiences are always on the way. Let's keep in touch!</h3>
 	</div>
 	<div class="footer-bottom" tabindex="0">
 		<p>© <span id="year"> </span> Tori Turpin. All Rights Reserved.</p>
